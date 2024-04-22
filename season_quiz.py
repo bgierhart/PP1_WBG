@@ -203,7 +203,7 @@ def question5():
     st.header("I can't get enough...")
     st.write("A. Vampires!")
     st.write("B. Dahl!")
-    st.write("B. Drag Queens!")
+    st.write("C. Drag Queens!")
     selection = st.text_input("Please enter the letter corresponding to your selection:")
     upper_selection = selection.upper()
     if upper_selection == "A":
