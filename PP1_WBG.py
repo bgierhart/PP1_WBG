@@ -29,7 +29,7 @@ with st.sidebar:
 if category=="***Start***":
     col1, col2, col3 = st.columns(3)
     with col2:
-        image1 = Image.open("announcement.jpg")
+        image1 = Image.open('announcement.jpg')
         st.image(image1, width=300, caption="Announcing Actors Theatre of Louisville's 24-25 Season")
     st.write(sq.intro)
     st.write(sq.start)

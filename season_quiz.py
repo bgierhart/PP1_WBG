@@ -33,7 +33,8 @@ all_ages = {"A": "Actors Theatre continues the tradition of empowering and suppo
 
 returning_shows = {"A": "In October, the king of the vampires will once again meet his demise in Kate Hamill's thrillingly inventive DRACULA: A FEMINIST REVENGE FANTASY based on the novel by Bram Stoker and directed by Jennifer Pennington. Hamill gleefully drives a stake through the sexism in Stoker’s time—and our own—by centering the women characters. While pregnant, Mina Harker plays a leading role in confronting the monster, challenging the notion that motherhood diminishes a woman’s strength or heroism. You won’t find damsels in distress here, but you will find a compelling dose of humor and horror.",
                    "B": "In February, get ready to celebrate as Actors Theatre throws another MRS KRISHNAN'S PARTY, presented by New Zealand's Indian Ink Theatre Company, by Jacob Rajan and Justin Lewis. This one-of-a-kind production brought so much joy, energy, and community to the Victor Jory Theater last year that it had to return so that more audiences could experience what unfolds in this surprising and heartfelt celebration of life. You'll even be served food at the end of the show. What better way to bond with the audience around you?",
-                   "C": "Actors Theatre will continue THE AFTER SHOW SHOW, a late-night cabaret series hosted by Drag Queens Dusty Ray Bottoms and May O'Nays. Inspired by New York cabarets where Broadway performers sing something from their books after performing in another show, THE AFTER SHOW SHOW offers to keep the party going by inviting local, touring, and youth performers to share their talents and offer a selection of their choosing. Look for dates to be announced following performances at Actors Theatre or Kentucky Performing Arts to extend your night out!"
+                   "C": "Four years in the making, Actors Theatre finally gets the chance to have Flex in their court in Spring 2025. This extraordinary play about a high school women's basketball team in rural Arkansas is written by Candrice Jones and will be directed by Actors Theatre's 2022–23 SDCF Lloyd Richards New Futures Resident Artist, Kendra Ware. Flex was mere days away from a 2020 world premiere in the Bingham Theater when the pandemic shut it down. The play has since been celebrated as a breakout work and its resonance has only continued to deepen. Actors Theatre believes this story is vital to share with Louisville as it uplifts a story of Black women in the South. There is also a key storyline about a teammate's pregnancy, and the play powerfully explores what having choices really means and how pathways to the future are shaped within the circumstances these young women face. Their ability to find ways to rally in solidarity and friendship feels perfectly in sync with Actors Theatre's investment in storytelling that promotes well-being, healing, and joy.",
+                   "D": "Actors Theatre will continue THE AFTER SHOW SHOW, a late-night cabaret series hosted by Drag Queens Dusty Ray Bottoms and May O'Nays. Inspired by New York cabarets where Broadway performers sing something from their books after performing in another show, THE AFTER SHOW SHOW offers to keep the party going by inviting local, touring, and youth performers to share their talents and offer a selection of their choosing. Look for dates to be announced following performances at Actors Theatre or Kentucky Performing Arts to extend your night out!"
     }
 
 def question1():
@@ -203,7 +204,8 @@ def question5():
     st.header("I can't get enough...")
     st.write("A. Vampires!")
     st.write("B. Dahl!")
-    st.write("C. Drag Queens!")
+    st.write("C. Basketball!")
+    st.write("D. Drag Queens!")
     selection = st.text_input("Please enter the letter corresponding to your selection:")
     upper_selection = selection.upper()
     if upper_selection == "A":
@@ -223,6 +225,14 @@ def question5():
         st.page_link("https://www.actorstheatre.org/archive/2024-2025-season-announcement/", label="Click here to learn about the rest of our season!")
         
     elif upper_selection == "C":
+         col1, col2, col3 = st.columns(3)
+         with col2:
+             image10 = Image.open('Flex.jpg')
+             st.image(image10, width=300, caption="FLEX")
+         st.write(returning_shows[upper_selection])
+         st.page_link("https://www.actorstheatre.org/archive/2024-2025-season-announcement/", label="Click here to learn about the rest of our season!")
+        
+    elif upper_selection == "D":
          col1, col2, col3 = st.columns(3)
          with col2:
              image9 = Image.open('After.jpg')
